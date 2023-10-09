@@ -6,11 +6,21 @@
 
 actor: AcceptanceTester
 modules:
-    enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
-# add Codeception\Step\Retry trait to AcceptanceTester to enable retries
-step_decorators:
-    - Codeception\Step\ConditionalAssertion
-    - Codeception\Step\TryTo
-    - Codeception\Step\Retry
+  enabled:
+    - Tests\Support\Helper\Acceptance:
+        url: https://www.vseinstrumenti.ru/
+        browser: chrome
+#        port: '9515'
+    - Asserts
+#extensions:
+#  enabled:
+#    - Codeception\Extension\RunProcess:
+#        0: './chromedriver --url-base=/wd/hub'
+#        sleep: 1
+#env:
+#  Test1:
+#    modules:
+#      config:
+#        Tests\Support\Helper\Acceptance:
+#          host: '%SELENOID_HOST%'
+#          url: 'http://%DOMAIN%'
