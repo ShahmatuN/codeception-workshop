@@ -13,7 +13,7 @@ class AnalogCest
     {
         $I->amOnPage('/category/pily-1348/maktec-663/');
         $I->waitForElementVisible(self::BTN_ANALOG);
-        $I->scrollTo(self::BTN_ANALOG);
+        $I->scrollTo(self::BTN_ANALOG, 0, -450);
         $I->click(self::BTN_ANALOG);
         $I->waitForElementVisible(self::GET_ANALOG_MODAL);
     }
