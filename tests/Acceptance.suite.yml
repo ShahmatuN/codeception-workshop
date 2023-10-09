@@ -1,0 +1,26 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+  enabled:
+    - Tests\Support\Helper\Acceptance:
+        url: https://www.vseinstrumenti.ru/
+        browser: chrome
+#        port: '9515'
+    - Asserts
+#extensions:
+#  enabled:
+#    - Codeception\Extension\RunProcess:
+#        0: './chromedriver --url-base=/wd/hub'
+#        sleep: 1
+#env:
+#  Test1:
+#    modules:
+#      config:
+#        Tests\Support\Helper\Acceptance:
+#          host: '%SELENOID_HOST%'
+#          url: 'http://%DOMAIN%'
