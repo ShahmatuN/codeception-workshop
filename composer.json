@@ -3,6 +3,7 @@
         "codeception/codeception": "^5.0",
         "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "*",
-        "codeception/module-webdriver": "*"
+        "codeception/module-webdriver": "*",
+        "codeception/module-rest": "^3.3"
     }
 }

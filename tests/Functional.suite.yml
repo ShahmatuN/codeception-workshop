@@ -7,6 +7,8 @@
 
 actor: FunctionalTester
 modules:
-    enabled:
-        # add a framework module here
-step_decorators: ~
+  enabled:
+    - REST:
+        depends: PhpBrowser
+        url: https://bff.vseinstrumenti.ru
+    - Asserts
